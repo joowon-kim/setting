@@ -3,6 +3,8 @@
 
    if BOUNDS_CHECK is defined,
    check index bound
+   
+   TODO: constructors
 */
 
 #ifndef CONTAINER_INDEX
@@ -22,6 +24,9 @@ namespace jw
 		typedef std::vector<T>		_Base;
 		typedef typename _Base::size_type	size_type;
 
+		// constructor
+		vector(size_type n) : _Base(n) {}
+		
 		T& operator[](size_type __n)
 		{
 #ifdef BOUNDS_CHECK
